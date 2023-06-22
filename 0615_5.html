@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>자바스크립트</title>
+
+</head>
+<body>
+    <h1>같은 변수에 다른 타입의 값 대입</h1>
+    <p id="result"></p>
+    <script>
+        var num = 20;   //변수의 선언과 함께 초기화
+        document.getElementById("result").innerHTML = num + "<br />";
+        num = "이십"; //문자열 대입
+        document.getElementById("result").innerHTML += num + "<br />";
+        var  num;          // 한 변수를 여러변 초기화 할 수 있으나
+                            // 재선언은 할 수 없습니다.
+        document.getElementById("result").innerHTML += num + "<br />";
+    </script>
+    <br /><br />
+    <h1> 묵시적 타입 변환</h1>
+    <p id="result2"></p>
+    <script>
+        var result = 10 + "문자열"; // 문자열 연결을 위해 숫자 10이 문자열로
+        document.getElementById("result2").innerHTML = result + "<br />"
+        result = "3" * "5"; //두 문자열 모두 숫자로 변환
+        document.getElementById("result2").innerHTML += result + "<br />"
+        result = 1 - "문자열";
+        document.getElementById("result2").innerHTML += result + "<br />"
+    </script>
+    <br /><br />
+    <h1>명시적 타입 변환</h1>
+    <p id="result3"></p>
+    <script>
+        document.getElementById("result3").innerHTML = Number("10") + "<br />";
+        document.getElementById("result3").innerHTML += String(true) + "<br />";
+        document.getElementById("result3").innerHTML += Boolean(0) + "<br />";
+        document.getElementById("result3").innerHTML += Object(3) + "<br />";
+
+        document.write("12345<br />")
+
+        document.getElementById("result3").innerHTML += String(false) + "<br />";
+        document.getElementById("result3").innerHTML += false.toString + "<br />";
+    </script>
+    <br /><br/>
+    <h1>변수명 재선언시 데이터 값 변화 </h1>
+    <script>
+        stdName = "홍길동";
+        comGrade = 96;
+
+        var stdName;
+        var comGrade;
+        document.write("<br />");
+        document.write("학생이름 : " + stdName + "<br />");
+        document.write("컴퓨터점수 : " + comGrade + "<br />");
+    </script>
+    <script>
+        /*
+        //전역, 지역변수
+        var globValue1; //전역변수 선언
+        globValue2;     //전역변수 선언, var생략
+
+        function test()
+        {
+            var locValue;   //지역변수 선언
+            globValue;      //함수 내부에서 var생략시 자동 전역변수로 선언
+            locValue = 10; //지역변수 사용
+        }
+
+        globValue = 10; // 전역변수 사용
+        */
+    </script>
+
+
+
+    <script>
+        //전역변수 지역변수 예제
+        function getGrade()
+        {
+            var kor = 95;   //지역변수
+            
+        }
+
+        var kor = 100;  //전역변수
+        getGrade();     //함수호출
+        
+        document.write("국어점수 : " + kor + "<br />");
+    </script>
+    
+    
+    <script>
+        //전역변수 지역변수 예제
+        function getGrade2()
+        {
+            var kor = 95;   //지역변수
+            return kor;
+        }
+
+        kor = getGrade2();
+        document.write("국어점수 : " + kor + "<br />");
+    </script>
+</body>
+</html>

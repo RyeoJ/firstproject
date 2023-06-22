@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+   
+    <head>
+        <title>자바스크립트</title>
+    </head>
+   
+    <body>
+        <h1>continue문(5, 7의 배수 인경우만 출력)</h1>
+        <script>
+            var i;
+
+            for(i=1; i<100; i++)
+            {
+                if(i % 5 != 0 && i % 7 != 0)
+                {
+                    continue;
+                }
+
+                document.write(i+" ");
+            }
+           
+            document.write("<br/><br/>");
+           
+        </script>
+        <h1>break문 </h1>
+        <script>
+            /*
+            문제)break문제
+            break를 이용하여 1에서 얼마까지 더해야 3000을 넘을 수 있는지 구하세요.
+            출력예) 77까지 더하면 3000을 넘음 : 3003
+            */
+
+            var i, sum = 0;
+       
+            for(i=1; i < 100; i++) //무한루프돌려도됨
+            {
+                sum += i;
+
+                if(sum>3000)
+                {
+                   
+                    break;
+                }
+            }
+            document.write(i+ "까지 더하면 3000을 넘음 : " + sum+ "  <br />"); 
+       
+    
+
+        
+          
+            var i = 1;
+            var sum = 0;
+            while(true)
+            {
+                sum += i;
+                if(sum>3000)
+                {
+                    break;
+                }
+                i++;
+            }
+            document.write(i+ "까지 더하면 3000을 넘음 : " + sum); 
+        </script>
+       
+    </body>
+</html>

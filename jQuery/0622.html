@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>제이쿼리</title>
+    <script>
+        function func()
+        {
+            addAttribute();
+            createElement();
+        }
+
+        function addAttribute()
+        {   //현재 body태그안에서 id가 para로 있는걸 가져와 para안에 속성을 추가
+            document.getElementById("para").setAttribute("style", "color:red");
+        
+        }
+
+        function createElement()
+        {
+            var createNode = document.getElementById("para");
+            var newNode = document.createElement("p");    // <p></p> 
+            newNode.innerHTML = "새로운 태그 추가입니다."; // newNode가 <p> </p>를 가르킴
+            newNode.setAttribute("id", "para"); // <p id para추가>새로운태그 추가</p>
+            document.body.insertBefore(newNode, createNode);
+            //newNode를 추가함 createNode 앞에다가 
+         
+        }
+    </script>
+</head>
+<body>
+    <h1>아직 생성되지 않은 HTML 태그 속성 추가</h1>
+    <button onclick="func()">속성추가</button>
+    <p id="para"></p>
+</body>
+</html>

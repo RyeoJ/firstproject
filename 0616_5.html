@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>제어문(switch)</title>
+    <script>
+
+  
+    </script>
+</head>
+
+<body>
+    <script>
+        /*
+        var day;
+        var week = new Date().getDay();         // 0~6까지 가져옴 0(일요일)~ 6(토요일)
+
+        switch (week) {
+            case 0:
+                day = "일요일";
+                break;
+            case 1:
+                day = "월요일";
+                break;
+            case 2:
+                day = "화요일";
+                break;
+            case 3:
+                day = "수요일";
+                break;
+            case 4:
+                day = "목요일";
+                break;
+            case 5:
+                day = "금요일";
+                break;
+            case 6:
+                day = "토요일";
+                break;
+            default:
+                day ="없는 요일";
+            }
+            
+            document.write("<h1>오늘은 <b>" + day + "</b>입니다.</h1>");
+            */
+        /*
+        문제) switch문사용하여
+            커피를 주문하는 과정중 무슨 커피를 주문할지 입력을 받은 후 출력하는 프로그램.
+            입력예) 무슨커피드릴까요? 아이스아메리카노 // prompt사용
+            출력예) 아이스아메리카노는 1500원입니다.
+            단, 아이스아메리카노(icecoffee)인 경우 1500원
+                카페라떼 : 4500원
+                바닐라라떼 : 5500원
+                나머지는 '수박차는 없습니다'
+                출력시 정상적인 경우가 금액이 적용되었을 경울 판단.
+            
+        
+        
+            
+        var order = prompt("무슨 커피를 드릴까요?")
+        var price = 0;
+        switch (order) {
+            case "아아":
+            case " icecoffee":
+                price = 1500;
+                break;
+
+            case "카페라떼":
+            case "cafelatte":
+                price = 4500;
+                break;
+
+            case "바닐라라떼":
+            case "Vanilla Latte":
+                price = 5500;
+                break;
+
+            default:
+                document.write(order + " 값은 없습니다.")
+                
+        }
+        //if(typeof price != "undefined") //값이 안들어간게 아니면 실행
+        if (price != 0)
+        {
+            document.write(order + "는 " + price + "원입니다.");
+        }
+*/
+
+
+        /*
+        문제) 요일을 입력받아 정상영업인지 휴무일인지 알려주는 스크립트구현
+            입력은 prompt()힘수사용
+            월화수목금은 정상영업, 토일은 휴무 라고 출력
+            입력예) 화
+            출력예) 화요일은 정상영업
+            단, 출력은 switch문에서 처리.
+            ...요일은 정상영업/ ...요일은 휴무/...은 요일이 아닙니다.
+        */
+        /*
+                var day = prompt("요일을 입력하세요");
+        
+                switch(day)
+                {
+                    case '월' : 
+                    case '화' : 
+                    case '수' : 
+                    case '목' : 
+                    case '금' : 
+                        document.write(day + "요일은 정상영업");
+                        break;
+                    case '토' :
+                    case '일' :
+                        document.write(day + "요일은 휴무")
+                        break;
+                    default :
+                        document.write(day + "은 요일이 아닙니다.")
+                }
+                */
+
+        /*
+        성적 A~F값을 입력
+        */
+        /*
+         var grade = prompt("성적을 입력하세요.");
+ 
+         switch(grade.toUpperCase()) //대문자로바꿈
+         {
+             case 'A' :
+                 alert("아주잘했습니다.");
+                 break;
+             case 'B' :
+                 alert("좋은점수군요.");
+                 break;
+             case 'C' :
+                 alert("조금더 노력하세요.");
+                 break;  
+             case 'F' :
+                 alert("다음학기 수강하세요.");
+                 break;
+             default:
+                 alert("알수 없는 학점입니다.")
+ 
+         }
+ */
+
+
+
+
+    </script>
+    
+</body>
+
+</html>

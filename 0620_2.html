@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>자바스크립트</title>
+</head>
+<body>
+    <h3>arguments 객체</h3>
+    <script>
+        function addNum()
+        {
+            var sum = 0, i;
+
+            for(i = 0; i < arguments.length; i++)
+            {
+                sum += arguments[i];
+            }
+
+            return sum;
+        }
+        document.write("addNum(1,2,3) : " + addNum(1,2,3) + "<br />" );
+        document.write("addNum(1,2) : " + addNum(1,2) + "<br />" );
+        document.write("addNum(1) : " + addNum(1) + "<br />");
+        document.write("addNum() : " + addNum() + "<br />");
+        document.write("addNum(1,2,3,4,5,6,7,8,9,10) : " + addNum(1,2,3,4,5,6,7,8,9,10) + "<br />");
+    </script>
+    <br /><br />
+    <h3> String 메서드</h3>
+    <script>
+        var str = "abcDEFabc";//9
+
+        document.write("indexOf('abc') : " + str.indexOf('abc') + "<br />");
+        document.write("indexOf('abcd') : " + str.indexOf('abcd') + "<br />");
+        document.write("indexOf('abc', 3) : " + str.indexOf('abc', 3) + "<br />"); //3부터시작하여 abc있는곳을 찾음
+        document.write("lastIndexOf('abc') : " + str.lastIndexOf('abc') + "<br />"); //lastIndexOf == 뒤에서 부터 찾음
+        document.write("lastIndexOf('d') : " + str.lastIndexOf('d') + "<br />");
+        document.write("lastIndexOf('c') : " + str.lastIndexOf('c') + "<br />");
+        
+    
+    </script>
+    <br /><br />
+    <h3>문자열에서 지정된 위치 문자 반환</h3>
+    <script>
+        var str2 = "abcDEFabc";
+        document.write("str2.charAt(0) : " + str2.charAt(0) + "<br />");
+        document.write("str2.charAt(10) : " + str2.charAt(10) + "<br />");
+
+    </script>
+    <br /><br />
+    <h3>문자열 추출</h3>
+    <script>
+        str = "abcDEFabc";
+        document.write("slice(2,6) : " + str.slice(2,6) + "<br />");
+        document.write("slice(-4,-2) : " + str.slice(-4,-2) + "<br />");
+        document.write("slice(2) : " + str.slice(2) + "<br />");
+        document.write("substring(2,6) : " + str.substring(2,6) + "<br />");
+        document.write("substr(2,4) : " + str.substr(2,4) + "<br />");
+
+        //공백제거 
+        var temp = "    java script    ";
+        document.write("[" + temp + "], length : " + temp.length + "<br />");
+        document.write("[" + temp.trim() + "] ,length : " + temp.trim().length +" <br /><br />");
+
+        
+
+
+    </script>
+    <br /><br />
+    <h3>문자열 분리</h3>
+    <script>
+        str = "자바스크립트는 너무 멋져요! 그리고 유용해요";
+
+        document.write("str.split() : " + str.split() + "<br />");
+        document.write("str.split('') : " + str.split("") + "<br />");
+        document.write("str.split(' ') : " + str.split(" ") + "<br />");
+        document.write("str.split('!') : " + str.split("!") + "<br />");
+
+        const arr = str.split(" ");
+        document.write("arr.length : " + arr.length + "<br />");
+        document.write("arr[0] : " + arr[0] + "<br />");
+        document.write("arr[1] : " + arr[1] + "<br />");
+        document.write("arr[2] : " + arr[2] + "<br />");
+        document.write("arr[3] : " + arr[3] + "<br />");
+
+    </script>
+    <br /><br />
+    <h3> 문자열의 대소문자 변환</h3>
+    <script>
+            str = "JavaScript";
+
+            document.write("toUpperCase() : " + str.toUpperCase() + "<br />");
+            document.write("toLowerCase() : " + str.toLowerCase() + "<br />");
+    </script>
+</body>
+</html>

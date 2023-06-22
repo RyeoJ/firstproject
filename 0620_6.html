@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //배열에 1부터 100까지 저장한 후 모두 더하기
+        var arrdata = [];
+        for(i = 0; i < 100; i++)
+            {
+                arrdata[i] = i + 1;
+                document.write(arrdata[i] + " ");
+            }
+            selectArr();
+        
+        function insertArr()
+        {   //데이터 저장(배열100)
+           arrdata = [100];
+          
+        }
+
+        function selectArr()
+        {   //데이터 조회
+           
+
+
+            document.write("<p>배열크기 :" + arrdata.length + "</p>");
+            document.write("<a href='0620_6.html'>돌아가기 </a>"); 
+        }
+      
+        function delDataArr()
+        {   //배열 데이터를 0으로 초기화
+            for(i = 0; i < 100; i++)
+            {
+                arrdata[i] = 0;
+                document.write(arrdata[i] + " ");
+            }
+            selectArr();
+        } 
+        function allDelArr()
+        {   //배열 초기화
+            arrdata.length = [0];
+            for(i = 0; i < arrdata.length; i++)
+            {
+                arrdata[i] = NaN;
+                document.write(arrdata[i] + " ");
+                
+            }
+           selectArr();
+        }
+    </script>
+    <!--
+        1) 페이지 로딩시 배열 값 1~100 출력하고 다음 줄에 
+        배열크기 : 100
+        돌아가기 <a href=0620_6.html>돌아가기 <a>
+    -->
+    <br />
+    <input type="button" value="배열 데이터 초기화" onclick="delDataArr()"/>
+    <br />
+    <input type="button" value="배열 데이터 삭제" onclick="allDelArr()"/>
+    <!--
+        2) 배열 데이터 초기화 버튼 선택
+        전체 0으로 예 ) 0 0 0 0 0 0 출력하고 다음 줄에
+        배열크기 : 100
+        돌아가기 <a href=0620_6.html>돌아가기 <a>
+        3) '배열 데이터 삭제 ' 버튼 선택
+        전체가 없어서 아무것도출력이 안되며
+        배열 크기 : 0
+        돌아가기 <a href=0620_6.html>돌아가기 <a> 
+    -->
+</body>
+</html>

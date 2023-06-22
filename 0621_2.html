@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>자바스크립트</title>
+    <script>
+        function styleChk()
+        {
+            var selectedItem = document.getElementsByTagName("li");
+
+            for(var i= 0; i < selectedItem.length; i++)
+            {
+                selectedItem.item(i).style.color = "orange";
+            }
+        }
+
+        function styleId()
+        {
+            var selectedItem = document.getElementById("even");
+            selectedItem.style.color = "red";
+        }
+       
+        function nameChk()
+        {
+            var selectedItem = document.getElementsByName("first");
+            
+            for(var i = 0; i < selectedItem.length; i++)
+            {
+                selectedItem.item(i).style.color = "blue";
+            }
+        }
+
+        function selectChk()
+        {
+            var selectedItem = document.querySelectorAll("li.odd");
+            for(var i = 0; i < selectedItem.length; i++)
+            {
+                selectedItem.item(i).style.color = "brown";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <!--태그 이름을 이용한 텍스트 스타일 변경-->
+    <h3>모든 li 요소 선택</h3>
+    <ul>
+        <li >첫번째</li>
+        <li id="even">두번째</li>
+        <li>세번째</li>
+    </ul>
+    <ul>
+        <li name="first">첫번째</li>
+        <li>두번째</li>
+        <li>세번째</li>
+    </ul>
+    <ul>
+        <li>첫번째</li>
+        <li>두번째</li>
+        <li class="odd">세번째</li>
+        <li>첫번째2</li>
+        <li>두번째2</li>
+        <li class="odd">세번째2</li>
+    </ul>
+    <input type="button" onclick="styleChk()" value="텍스트 색상변경" />
+    &nbsp;
+    <input type="button" onclick="styleId()" value="id텍스트 색상변경" />
+    &nbsp;
+    <input type="button" onclick="nameChk()" value="name으로 색상변경" />
+    &nbsp;
+    <input type="button" onclick="selectChk()" value="class로 색상변경" />
+    <br />
+    <h3>screen객체</h3>
+    <script>
+        document.write("현재 디스플레이 화면 너비" + screen.width + "픽셀입니다.<br />" );
+        document.write("현재 디스프레이 화면 높이" +  screen.height+ "픽셀입니다.<br />");
+        document.write("현 브라우저 창 너비 " + window.outerWidth + "픽셀입니다.<br />");
+        document.write("현 브라우저 창 높이 " + window.outerHeight + "픽셀입니다.<br />");
+        
+    </script>
+    <br /><br />
+    <script>
+        //현재 문서 url주소
+        document.write("현재 문서 주소는" + location.href + "입니다<br />");
+        // 브라우저에 새 url주소
+
+
+
+        function urlChk(val)
+        {
+            location.href = val;
+        }
+    </script>
+    <input type="button" onclick="urlChk('0621_1.html')" value="url 변경 적용" />
+    <br /><br />
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>자바스크립트</title>
+    <script>
+        var newWindowObj;
+        var strWindowF = "menubar= yes, resizable=yes, scrollbars=yes, status=yes";
+        var chk = 1;
+        function openWindow()
+        {
+            chk++;
+            newWindowObj = window.open("http://www.daum.net", "daum"+ chk, strWindowF +chk);
+        }
+        function closeNewWindow()
+        {
+            newWindowObj.close();
+        }
+    </script>
+</head>
+<body>
+    <h1>브라우저 새창열기 / 닫기 </h1>
+    <input type="button" value="새창열기" onclick="openWindow()">&nbsp;
+    <input type="button" value="새창닫기" onclick="closeNewWindow()">
+    <br /><br />
+    <script>
+        var arr = [1, true, "javascript"];
+        document.write("arr.length : " + arr.length + "<br />");
+        arr.push("자바스크립트");
+        document.write("arr.length : " + arr.length + "<br />");
+        document.write("arr : " + arr + "<br />");
+        arr.push(2, "안됨");
+        document.write("arr.length : " + arr.length + "<br />");
+        document.write("arr : " + arr + "<br />");
+        document.write("<br />");
+
+        //pop()메서드
+        document.write("arr.pop() : " + arr.pop() + "<br />");
+        document.write("arr.length : " + arr.length + "<br />");
+        document.write("arr : " + arr + "<br />");
+        document.write("arr.pop() : " + arr.pop() + "<br />");
+        document.write("arr.length : " + arr.length + "<br />");
+        document.write("arr : " + arr + "<br />");
+        document.write("<br />");
+
+        //shift()메서드
+        document.write("arr.shift() : " + arr.shift() + "<br />");
+        document.write("arr.length : " + arr.length + "<br />");
+        document.write("arr.shift() : " + arr.shift() + "<br />");
+        document.write("arr.length : " + arr.length + "<br />");
+        document.write("arr : " + arr + "<br />");
+        
+        document.write("<br />");
+        // unshift 메서드
+        arr = [1, true, "javascript"];
+        document.write("arr.length : " + arr.length + "<br />");
+        arr.unshift("자바스크립트");
+        document.write("arr.length : " + arr.length + "<br />");
+        document.write("arr : " + arr + "<br />");
+        arr.unshift(2, "되나");
+        document.write("arr.length : " + arr.length + "<br />");
+        document.write("arr : " + arr + "<br />");
+
+        // reverse()메서드
+        document.write("<h1>reverse()메서드</h1>");
+        arr = [1,true,"javascript","자바스크립트"];
+        document.write("arr.reverse() : " + arr.reverse() + "<br />");
+
+        // sort()메서드
+        document.write("<h1>sort()메서드</h1>");
+        var strArr = ["로마","나라 ","감자","다람쥐"];
+        var numArr = [10, 21, 1, 2, 3];
+        document.write("strArr.sort() : " + strArr.sort() + "<br />");
+        document.write("numArr.sort() : " + numArr.sort() + "<br />");
+       
+        // splice()메서드
+        document.write("<h1>splice()메서드</h1>");
+        arr = [1,true,"javascript","자바스크립트"];
+        var removedElement = arr.splice(1, 2, false, "C언어");
+        
+        document.write("arr : " + arr);
+        document.write("romovedElement : " + removedElement + "<br />");
+        
+
+        </script>
+</body>
+</html>

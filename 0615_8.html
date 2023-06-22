@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>자바스크립트</title>
+</head>
+
+<body>
+    <h2>제어문 if~else</h2>
+    <p id="result"></p>
+    <script>
+        var age = 19;
+
+        if (age > 19) {
+            result = "성인입니다.";
+        }
+        else {
+            result = "미성년자 입니다";
+        }
+
+        document.getElementById("result").innerHTML = result;
+    </script>
+    <!--정수를 입력 받아서 10보다 큰지 작은지 체크
+    입력예)정수를 입력하세요.
+    10
+    출력예)입력받은 값은 10이며, 10보다 크거나 같습니다.
+    단, 작은 경우는 '입력받은 값은 00이며, 10보다 작습니다.'
+    -->
+    <br /><br />
+    <h2>정수를 입력하세요</h2>
+    <p id="result4"></p>
+    <script>
+        var chk = prompt("정수를 입력하세요,");
+        var num = parseInt(chk); //하는이유 : 
+
+        document.write(typeof chk + "<br />");
+        document.write(typeof num + "<br />");
+
+        if (num >= 10) {
+
+            result = "입력받은 값은 " + num + "이며 10보다 크거나 같습니다.";
+
+        }
+        else {
+
+            result = "입력받은 값은 " + num + "이며 10보다 작습니다";
+        }
+
+        document.getElementById("result4").innerHTML = result
+    </script>
+    <br /><br />
+    <p id="result5"></p>
+    <script>
+        /*
+        문제) 현재 시간을 얻어 12시 이전이면 "Good morning" 오후 6시 이전이면
+        "good afternoon", 오후 6시 이후는 good evening"이라고 alert 메세지를 출력하세요.
+        단, 현재시간은 var time = new Date().getHours();
+        */
+
+
+
+        
+        var time = new Date().getHours();
+        var msg;
+        if (time < 12) 
+        {
+            msg = "Good morning";
+        }
+        else if(time < 18)
+        {
+            msg = "good afternoon";
+        }
+        else
+        {
+            msg = "Good evening";
+        }
+        alert(msg);
+    </script>
+
+</body>
+
+</html>

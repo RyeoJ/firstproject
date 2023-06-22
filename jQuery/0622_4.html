@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var items = $("li");
+            
+            $("button").on("click", function(){
+                $("#len").text("현재 페이지의 <li>태그는 총" + items.length + "개입니다.");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>li 요소 갯수 구하기</h3>
+    <ul>
+        <li>첫번째</li>
+        <li>두번째</li>
+        <li>세번째</li>
+        <li>네번째</li>
+        <li>다섯번째</li>
+    </ul>
+
+    <ul>
+        <li>첫번째</li>
+        <li>두번째</li>
+        <li>세번째</li>
+    </ul>
+    <button>li 갯수는</button>
+    <p id="len"></p>
+</body>
+</html>
